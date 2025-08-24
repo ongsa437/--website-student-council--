@@ -1,0 +1,248 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(ellipse at bottom,#170944 0% , #05000a 100%);
+  overflow: hidden;
+  color: white;
+  font-family: 'Poppins', 'Kanit', sans-serif;
+}
+
+/* ดาว */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 5px white;
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.shooting-star {
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, white, rgba(255, 255, 255, 0));
+  top: 20%;
+  left: 80%;
+  transform: rotate(-45deg);
+  animation: shoot 3s ease-in-out infinite;
+}
+
+@keyframes shoot {
+  0% {
+    transform: translate(0, 0) rotate(-45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-600px, 300px) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+/* จัดข้อความ */
+.middle-left {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 20%;
+}
+
+
+/* ======================== PROFILE IMG ======================== */
+
+/* รูปภาพซ้าย: profile1, profile2, profile3 */
+.profile1, .profile2, .profile3 {
+  position: absolute;
+  top: 65%;
+  transform: translateY(-50%);
+  width: fit-content;
+  height: fit-content;
+  z-index: 10;
+}
+
+.profile1 {
+  left: 20%;
+}
+
+.profile2 {
+  left: 30%;
+}
+
+.profile3 {
+  left: 40%;
+}
+
+/* รูปภาพขวา: profile */
+.profile {
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  transform: translateY(-50%);
+  width: 400px;
+  height: 400px;
+  z-index: 10;
+}
+
+/* ======================== IMAGE STYLE ======================== */
+
+.profile-img,
+.profile-img1,
+.profile-img2,
+.profile-img3 {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 30px 10px rgba(189, 238, 215, 0.6);
+}
+
+/* รูปภาพขวาขนาดใหญ่กว่าหน่อย */
+.profile-img {
+  width: 150px;
+  height: 150px;
+}
+
+/* ======================== HOVER EFFECT ======================== */
+
+.profile-img:hover,
+.profile-img1:hover,
+.profile-img2:hover,
+.profile-img3:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px 15px rgba(127, 225, 238, 0.6);
+
+}
+.profile-img4 {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  box-shadow: 0 0 40px 15px rgba(27, 185, 229, 0.6);
+}a
+
+.middle-1 {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 22%;
+  top: 120%;
+
+}
+
+@media (max-width: 678px) {
+  body {
+    overflow: auto;
+    text-align: center;
+    padding: 13px;
+    background: radial-gradient(ellipse at bottom,#170944 0% , #0c011b 100%);
+  }
+
+
+  /* เอาโลโก้ขึ้นก่อน */
+  .profile {
+    position: static;
+    margin: 0 auto 15px auto;
+    width: 100px;
+    height: 100px;
+    display: block;
+    padding: 8%;
+    margin-top: 20%;
+    margin-right: 39%;
+  }
+
+  .profile-img4 {
+    width: 220px;
+    height: 220px;
+  }
+
+
+
+
+
+  /* สไตล์ข้อความที่เหลือ */
+  .middle-left h2 {
+    margin: 1px 0; /* ลดช่องว่างให้ชิดขึ้น */
+    line-height: 10%;
+    padding-left: 14%;
+
+  }
+
+  .middle-left {
+    position: static;
+    padding-left: 1px;
+    margin: 5px 6px;
+    margin-left: 11%;
+    top: 40%;
+  }
+
+  /* โปรไฟล์ไอคอนในแถวเดียว */
+  .profile1, .profile2, .profile3 {
+    position: static;
+    margin: 0 10px;
+    transform: none;
+    display: inline-block;
+    top: 4%;
+    padding-left: 17px;
+    margin-top: 13%;
+  }
+
+  .profile + .middle-left{ /* ระยะห่างรูปภาพกับข้อความ*/
+    margin-top: 60px;
+  }
+
+
+
+  .profile-img1,
+  .profile-img2,
+  .profile-img3 {
+    width: 84px;
+    height: 84px;
+  }
+  .middle-left h3{
+    position: static;
+    padding-left: 1px;
+    margin: 5px 9px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+  .contact-text {
+    text-align: left; /* หรือใช้ padding-left แทน */
+    padding-left: 10px;
+  }
+
+  .middle-left3 {
+  position: static;
+  padding-left: 10px;  /* ขยับซ้ายเล็กน้อย */
+  margin-top: 21%;     /* ระยะด้านบนเล็กน้อย */
+  margin-bottom: 0;    /* ไม่ให้มีช่องว่างเกินไป */
+
+  }
+
+    .middle-left4 {
+  position: static;
+  padding-left: 10px;  /* ขยับซ้ายเล็กน้อย */
+  margin-top: 30%;     /* ระยะด้านบนเล็กน้อย */
+  margin-bottom: 0;    /* ไม่ให้มีช่องว่างเกินไป */
+}
+
+
+  
+}
+
+.middle-left3 {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 20%;
+  top: 40%;
+}
+
